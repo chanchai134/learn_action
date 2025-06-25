@@ -12,7 +12,7 @@ on:
          default: warning
          options:
            - info
-           - warnging
+           - warning
            - debug
       tag:
         description: Require tag after run
