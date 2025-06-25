@@ -1,4 +1,7 @@
 on:
+  repository_dispatch:
+    types:
+      - pom
   push: 
     branches: [main]
   workflow_dispatch:
@@ -34,6 +37,11 @@ jobs:
         run: |
             echo "The repository ${{ github.repository }} contains the following files:"
             tree
+            
+      - name: API call
+        run: echo "Payload: ${{ toJSON(github.event.client_payload) }}"
+        if: ${{ github.event_name == 'repository_dispatch' }}
+        
       - name: log
         run: |
             echo "homedrive: ${{ inputs.homedrive }}"
