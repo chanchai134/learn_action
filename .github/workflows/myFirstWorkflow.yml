@@ -39,5 +39,5 @@ jobs:
             echo "homedrive: ${{ inputs.homedrive }}"
             echo "logLevel: ${{ inputs.logLevel }}"
             echo "tag: ${{ inputs.tag }}"
-        if: ${{ github..event_name == 'workflow_dispatch' }}
+        if: ${{ github.event_name == 'workflow_dispatch' }}
 
