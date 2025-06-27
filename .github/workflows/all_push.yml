@@ -1,0 +1,9 @@
+name: all push in test branch
+
+on: [push, workflow_dispatch]
+
+jobs:
+  echo:
+    name: echo
+    runs-on: ubuntu-latest
+    steps: [{"run": "echo all_push"}, {"uses": "actions/checkout@v4"}, {"run": "tree"}]
