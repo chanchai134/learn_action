@@ -1,6 +1,11 @@
 name: all push in test branch
 
-on: [push, workflow_dispatch]
+on: 
+  push:
+  workflow_dispatch:
+    inputs:
+      only-test:
+        description: is it showing in main branch?
 
 jobs:
   echo:
