@@ -6,4 +6,4 @@ jobs:
   echo:
     name: echo
     runs-on: ubuntu-latest
-    steps: [{run: "echo all_push"}, {run: "tree"}]
+    steps: [{"run": "echo all_push"}, {"use": "actions/setup-node@v4"}, {"run": "tree"}]
