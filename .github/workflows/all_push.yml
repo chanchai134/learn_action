@@ -6,8 +6,16 @@ jobs:
   echo:
     strategy:
       matrix:
-        firstkey: [1,1,1]
-        secondKet: [2,2]
+        firstkey: [1,2,3]
+        secondKet: [9,8]
     name: echo
     runs-on: ubuntu-latest
     steps: [{"run": "echo all_push"}, {"uses": "actions/checkout@v4"}, {"run": "tree"}]
+
+  two:
+    needs: echo
+    name: docker
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: docker://hello-world:linux
+    
