@@ -15,7 +15,7 @@ jobs:
   two:
     needs: echo
     name: docker
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps: 
       - uses: docker://hello-world:linux
     
