@@ -1,0 +1,13 @@
+name: notice and PR
+
+on: 
+ pull_request:
+ push: 
+   branches: [main]
+
+jobs:
+  noticeNaja:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "::notice file=intest.txt,line=4,col=6::notice testing"
+    
