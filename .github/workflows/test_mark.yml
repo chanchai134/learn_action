@@ -1,3 +1,4 @@
+name: test Mark
 on: push
 jobs:
   generate-a-secret-output:
