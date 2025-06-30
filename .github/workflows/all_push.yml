@@ -18,4 +18,17 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: docker://hello-world:linux
-    
+
+  summaryMD:
+    needs: two
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "## Test action job summary by pom" >> $GITHUB_STEP_SUMMARY
+          echo "![Static Badge](https://img.shields.io/badge/PR-pom_review-green)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| name  | icon |" >> $GITHUB_STEP_SUMMARY
+          echo "| ----- | ---- |" >> $GITHUB_STEP_SUMMARY
+          echo "| smile | 😄   |" >> $GITHUB_STEP_SUMMARY
+          echo "| check | ✅   |" >> $GITHUB_STEP_SUMMARY
+          echo "| fail  | ❌   |" >> $GITHUB_STEP_SUMMARY    
