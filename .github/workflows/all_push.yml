@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: docker://hello-world:linux
-      - uses: devops-actions/actionlint@0.1.9
+      - uses: devops-actions/actionlint@v0.1.9
       - run: echo "::debug::this should print out ACTIONS_STEP_DEBUG -> ${{ vars.ACTIONS_STEP_DEBUG }}"
 
   summaryMD:
