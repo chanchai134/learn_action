@@ -36,4 +36,4 @@ jobs:
             echo "| smile | 😄   |"
             echo "| check | ✅   |"
             echo "| fail  | ❌   |"
-          } >> $GITHUB_STEP_SUMMARY  
+          } >> "$GITHUB_STEP_SUMMARY"
