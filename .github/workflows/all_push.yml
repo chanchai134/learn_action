@@ -20,7 +20,7 @@ jobs:
       - uses: docker://hello-world:linux
       - uses: actions/checkout@v4
       - uses: devops-actions/actionlint@v0.1.9
-      - run: echo "::debug::this should print out ACTIONS_STEP_DEBUG -> ${{ vars.ACTIONS_STEP_DEBUG }}"
+      - run: echo "::debug::this should print out ACTIONS_STEP_DEBUG"
 
   summaryMD:
     needs: two
