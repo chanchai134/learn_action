@@ -17,7 +17,6 @@ jobs:
     name: docker
     runs-on: ubuntu-latest
     steps: 
-      - uses: docker://hello-world:linux
       - uses: actions/checkout@v4
       - uses: devops-actions/actionlint@v0.1.9
       - run: echo "::debug::this should print out ACTIONS_STEP_DEBUG -> ${{ vars.ACTIONS_STEP_DEBUG }}"
@@ -26,6 +25,7 @@ jobs:
     needs: two
     runs-on: ubuntu-latest
     steps:
+      - uses: docker://hello-world:linux
       - run: |
           echo "## Test action job summary by pom" >> $GITHUB_STEP_SUMMARY
           echo "![Static Badge](https://img.shields.io/badge/PR-pom_review-green)" >> $GITHUB_STEP_SUMMARY
